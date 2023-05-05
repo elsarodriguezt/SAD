@@ -32,7 +32,7 @@ while revenja == True:
 
         jugadorX.dibuixarTaulell()                                          #dibuixem el taulell actualitzat
 
-        simbolX = pickle.dumps(jugadorX.llistaSimbols)                      # pickle the symbol list and send it 
+        simbolX = pickle.dumps(jugadorX.llistaSimbols)                     
 
         socket_client.send(simbolX)
 
@@ -59,7 +59,7 @@ while revenja == True:
     resposta_client = ""
 
    
-    resposta_host = pickle.dumps(resposta_host)                         # pickle response and send it to the client 
+    resposta_host = pickle.dumps(resposta_host)                        
     socket_client.send(resposta_host)
 
     if temp_host_resp == "N":                                               #si  no es vol revenja, s'acaba el joc
